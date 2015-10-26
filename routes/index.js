@@ -52,11 +52,18 @@ exports.hero = function(req, res) {
   res.json(facts);
 }
 
+var assert = require("assert");
 //funcion para manejar la ruta de añadir un alumno
 exports.addFact = function(req, res) {
   var hero = _(heroes).detect(function(p) {
     return p.name == req.body.name;
   });
-  hero.facts.push(req.body.fact);
-  res.json({status: 'ok' });
+  if (req.body.fact.length < 3) {
+    console.log("El nombre tiene que tener al menos 3 caracteres");
+    assert(req.body.fact, "Mínimo 3 caracteres");
+  }else {  
+    hero.facts.push(req.body.fact);
+     console.log("Alumno añadido correctamente");
+    res.json({status: 'ok' });
+  }
 }

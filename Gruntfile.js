@@ -15,9 +15,9 @@ module.exports = function(grunt) {
   }
   });
 
-  // Carga el plugin de grunt para hacer esto
+  // Carga el plugin de grunt
   grunt.loadNpmTasks('grunt-docco');
 
-  // Tarea por omisión: generar la documentación
+  // Por defecto generarla documentación
   grunt.registerTask('default', ['docco']);
 };

@@ -1,10 +1,10 @@
 var assert = require("assert");
-miweb = require(__dirname+"/../app.js");
+web = require(__dirname+"/../app.js");
 
-describe('Miweb', function(){
-    describe('Comentar', function(){
-        it('Debe cargar el programa', function(){
-            assert(miweb, "Cargado");
+describe('appweb', function(){
+    describe('appweb', function(){
+        it('Debe cargar la app', function(){
+            assert(web, "Cargado");
         });
     });
 });

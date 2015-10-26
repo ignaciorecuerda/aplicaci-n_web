@@ -50,11 +50,11 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
+              <p>parte del servidor</p>
+
             </div>
             
-            <div class="content"><div class='highlight'><pre>
-<span class="hljs-comment">/**
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">/**
  * Module dependencies.
  */</span>
 
@@ -79,19 +79,83 @@ app.configure(<span class="hljs-function"><span class="hljs-keyword">function</s
 
 app.configure(<span class="hljs-string">'development'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
   app.use(express.errorHandler());
+});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>ruta que carga cuando esta en la raiz</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>app.get(<span class="hljs-string">'/'</span>, routes.index);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>ruta que responde a peticion pasandole un nombre</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>app.get(<span class="hljs-string">'/hero/:name'</span>, routes.hero);
+
+<span class="hljs-comment">/*
+var assert = require("assert")
+app.post('/hero/add-fact', function(){
+	routes.addFact;
+	var campo = routes.addFact;
+</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>assert(campo, “comentario”);</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	console.log(campo);
+	if(campo==null){
+		console.log("comentario nulo!");	
+	}
+	else{
+		console.log("comentario creado correctamente");
+	}
+	
 });
+*/</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>recibimos los datos de haber añadido un nuevo alumno</p>
 
-app.get(<span class="hljs-string">'/'</span>, routes.index);
-app.get(<span class="hljs-string">'/hero/:name'</span>, routes.hero);
-
-
-<span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">"assert"</span>)
-app.post(<span class="hljs-string">'/hero/add-fact'</span>, routes.addFact){
-	<span class="hljs-keyword">var</span> campo = routes.addFact.hero
-	assert(campo)
-}
-
-
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>app.post(<span class="hljs-string">'/hero/add-fact'</span>,routes.addFact);
 
 
 
